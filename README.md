@@ -3,8 +3,8 @@
 
 - Get real-world SIEM experience
 - Simulate real attacks and log activity
-- Build automated **alerting, playbooks, and threat intelligence feeds
-- Practice **threat hunting** using KQL (Kusto Query Language)
+- Build automated alerting, playbooks, and threat intelligence feeds
+- Practice threat hunting using KQL (Kusto Query Language)
 - Lay the foundation for advanced SOC workflows
 
 **Architecture Overview**
