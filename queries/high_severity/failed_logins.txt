@@ -1,0 +1,7 @@
+Syslog
+| where TimeGenerated > ago(6h)
+| where Facility in ("auth", "authpriv")
+| where SyslogMessage has_any("Failed password", "Invalid user")
+| summarize FailedLogins = count() by Computer, HostName, bin(TimeGenerated, 1h)
+| where FailedLogins >= 10
+| order by FailedLogins desc, TimeGenerated desc

@@ -1,0 +1,5 @@
+Syslog
+
+| where TimeGenerated > ago(6h)
+
+| where SyslogMessage has "useradd" or SyslogMessage has "new user"

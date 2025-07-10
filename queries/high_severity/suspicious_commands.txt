@@ -1,0 +1,5 @@
+Syslog
+
+| where TimeGenerated > ago(6h)
+
+| where SyslogMessage has_any("curl", "wget", "base64", "nc", "netcat", "python", "perl")

@@ -1,0 +1,7 @@
+Syslog
+
+| where TimeGenerated > ago(6h)
+
+| where SyslogMessage has_any ("/etc/ssh/sshd_config", "/etc/passwd", "/etc/shadow")
+
+| where SyslogMessage has_any ("modified", "changed", "edited")

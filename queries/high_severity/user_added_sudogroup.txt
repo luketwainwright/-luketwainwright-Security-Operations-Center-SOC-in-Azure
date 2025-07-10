@@ -1,0 +1,7 @@
+Syslog
+
+| where TimeGenerated > ago(24h)
+
+| where SyslogMessage has "gpasswd" or SyslogMessage has "sudo" or SyslogMessage has "groupadd"
+
+| where SyslogMessage has "sudo"

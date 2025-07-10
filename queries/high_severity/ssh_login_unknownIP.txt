@@ -1,0 +1,9 @@
+Syslog
+
+| where TimeGenerated > ago(1h)
+
+| where SyslogMessage has "Accepted password"
+
+| parse SyslogMessage with * "from " src_ip:string " port"
+
+| where src_ip !in ("KNOWN.IP.ADDRESS", "TRUSTED.IP") 
